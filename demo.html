@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЕМО 2</title>
+
+    <link rel="stylesheet" href="demo.css">
+    <script src="demo.js"></script>
+</head>
+<body>
+    <aside id="boardman-wrapper">
+        BOARDMAN
+    </aside>
+
+    <aside id="taskman-wrapper" class="closed">
+        <button onclick="closeTaskmanView()">toggle taskman</button>
+        TASKMAN
+    </aside>
+
+    <main>
+        <header id="groupinfo-wrapper">
+            <div class="boardman-spacer"></div>
+            <div id="groupinfo">
+                <button onclick="toggleBoardmanView()">toggle boardman</button>
+                <h2 id="groupinfo__board-title">Название доски</h2>
+            </div>
+            <div class="taskman-spacer closed"></div>
+        </header>
+
+        <div id="tasklist-wrapper">
+            <div id="tasklist">
+                <div class="boardman-spacer"></div>
+                <!-- date-sorted taskgroups use following ids: taskgroup-overdue, taskgroup-nodata, taskgroup-today, taskgroup-tomorrow, taskgroup-dayaftertomorrow, taskgroup-thisweek, taskgroup-thismonth, taskgroup-later --->
+                <!-- category-sorted taskgroups use generated ids based on the category name, e.g: taskgroup-ЗАДАНИЕ -->
+
+                <section class="taskgroup">
+                    <div class="taskgroup-header">
+                        <h3 class="taskgroup-header__title">Группа задач окок</h3>
+                        <button class="taskgroup-header__control">Новая задача</button>
+                        <button class="taskgroup-header__control">...</button>
+                    </div>
+                    <div class="taskgroup-content">
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="taskgroup">
+                    <div class="taskgroup-header">
+                        <h3 class="taskgroup-header__title">Группа задач окок</h3>
+                        <button class="taskgroup-header__control">Новая задача</button>
+                        <button class="taskgroup-header__control">...</button>
+                    </div>
+                    <div class="taskgroup-content">
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="taskgroup">
+                    <div class="taskgroup-header">
+                        <h3 class="taskgroup-header__title">Группа задач окок</h3>
+                        <button class="taskgroup-header__control">Новая задача</button>
+                        <button class="taskgroup-header__control">...</button>
+                    </div>
+                    <div class="taskgroup-content">
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="taskgroup">
+                    <div class="taskgroup-header">
+                        <h3 class="taskgroup-header__title">Группа задач окок</h3>
+                        <button class="taskgroup-header__control">Новая задача</button>
+                        <button class="taskgroup-header__control">...</button>
+                    </div>
+                    <div class="taskgroup-content">
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="taskgroup">
+                    <div class="taskgroup-header">
+                        <h3 class="taskgroup-header__title">Группа задач окок</h3>
+                        <button class="taskgroup-header__control">Новая задача</button>
+                        <button class="taskgroup-header__control">...</button>
+                    </div>
+                    <div class="taskgroup-content">
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                        <article class="task">
+                            <div class="task-header">
+                                <input type="checkbox" class="task-header__done">
+                                <h4 class="task-header__title">Привет! Это название заметки очень длинное.</h4>
+                                <button class="task-header__control">...</button>
+                            </div>
+                            <div class="task-content" onclick="openTaskmanView()">
+                                <p>Я — сокращённый текст заметки, могу содержать не более N символов.</p>
+                            </div>
+                            <div class="task-footer">
+                                <span class="task-footer__meta">До: YY-MM-DD</span>
+                                <span class="task-footer__meta">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <div class="taskman-spacer closed"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="debug" style="position: absolute; bottom: 0; background-color: purple;">
+        <button onclick="toggleDebugView()">toggle debug</button>
+        <details>
+            <summary><b>Логика получения данных (предв.)</b></summary>
+            <pre style="text-align: left;">
+                <b>Обработка данных клиентом:</b>
+    
+                1. Получение UUID (например, из кук)
+                    - Если UUID нет, отправить на экран входа
+    
+                <b>Получение данных от сервера:</b>
+    
+                1. --> Текущая доска
+                2. <-- Если у пользователя есть права, данные:
+                    - (обработка ошибок, если UUID некорректный или группы не существует)
+                    - Информация о группе
+                    - Список участников группы с превилегиями
+                    - Список заметок (= заголовки заметок)
+    
+                <b>Обработка данных клиентом:</b>
+    
+                1. Парсинг и отображение информации о группе в интерфейсе
+                2. Заглушка ("Загрузка") в блоке заметок
+    
+                <b>Получение данных от сервера:</b>
+    
+                [АСИНХРОННО] ДЛЯ КАЖДОЙ ЗАМЕТКИ ИЗ СПИСКА:
+                1. --> Заметка
+                2. <-- Если у пользователя есть права, данные:
+                    - Сокращённая заметка (напр, первые 80 символов без аттачей)
+                    (мы будем получать полный текст заметки и аттачи только после нажатия)
+                    - Данные о заметке (заголовок, срок, метагруппа, редакторы + дата редактирования)
+                1. Получить данные способа сортировки (срок или метагруппы, если нет то срок)
+                2. Подготовить интерфейс к отображению нужных групп
+    
+                <b>Обработка данных клиентом:</b>
+                
+                [АСИНХРОННО] ПО ПОЛУЧЕНИИ ДАННЫХ О ЗАМЕТКЕ:
+                3. Новый блок с данными (сокращённая заметка + данные)
+                4. Распределение в нужную группу
+            </pre>
+        </details>
+    
+        <input type="text" name="demo-uuid" placeholder="UUID">
+        <input type="text" name="demo-bid" placeholder="BoardID">
+        <button type="submit">Получить вкусные данные</button>
+    </footer>
+</body>
+</html>
