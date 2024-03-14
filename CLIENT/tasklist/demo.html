@@ -121,11 +121,36 @@
                 3. Новый блок с данными (сокращённая заметка + данные)
                 4. Распределение в нужную группу
                 <hr>
-                date-sorted taskgroups use following ids:
-                    taskgroup-overdue, taskgroup-nodata, taskgroup-today, taskgroup-tomorrow,
-                    taskgroup-dayaftertomorrow, taskgroup-thisweek, taskgroup-thismonth, taskgroup-later ;
-                category-sorted taskgroups use generated ids
-                    based on the category name, e.g: taskgroup-ЗАДАНИЕ .
+                <b>Server Directory Structure:</b>
+
+                SERVER
+                |__ 🗄️ user_students
+                       |__ 🗂️ GROUP1
+                              |__ 📂 u0
+                                     |__ 🗒️ info.json
+                                     |__ 🗒️ member-of-boards.json
+                              |__ 📁 u1
+                              |__ 📁 …
+                |__ 🗄️ user_operators
+                       |__ 🗂️ GROUP1
+                              |__ 📂 o0
+                                     |__ 🗒️ info.json
+                                     |__ 🗒️ member-of-boards.json
+                              |__ 📁 o1
+                              |__ 📁 …
+                |__ 🗄️ boards
+                       |__ 🗂️ GROUP1
+                              |__ 📂 BOARD_NAME
+                                     |__ 🗒️ info.json
+                                     |__ 🗒️ memebers.json
+                                     |__ 🗒️ tasks.json
+                                     |__ 🗂️ tasks
+                                            |__ 📂 t0
+                                                   |__ 📕 body.md
+                                                   |__ 📕 body-short.md
+                                                   |__ 🗒️ info.json
+                                            |__ 📁 t1
+                                            |__ 📁 …
                 <hr>
                 <b>operator</b>
                     - может создавать доски в любой группе
