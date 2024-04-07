@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЕМО 2</title>
+
+    <link rel="stylesheet" href="demo.css">
+    <script src="dataIO_user.js"></script>
+    <script src="dataIO_task.js"></script>
+    <script src="interface.js"></script>
+    <script src="DEMO_serverData.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+</head>
+<body>
+    <main>
+        <header id="groupinfo-wrapper">
+            <div class="boardman-spacer"></div>
+            <div id="groupinfo">
+                <div class="groupinfo__title-wrapper">
+                    <button onclick="toggleBoardmanView()">&#9776</button>
+                    <h2 id="groupinfo__title">Название доски</h2>
+                </div>
+                <div class="groupinfo__controls">
+                    Группировка:
+                    <label><input type="radio" name="tasks-sort" checked="checked">По сроку</label>
+                    <label><input type="radio" name="tasks-sort">По категориям</label>
+                </div>
+            </div>
+            <div class="taskman-spacer closed"></div>
+        </header>
+
+        <div id="tasklist">
+            <div id="tasklist__inner">
+                <div class="boardman-spacer"></div>
+
+                <section class="taskcat">
+                    <div class="taskcat-wrapper">
+                        <div class="taskcat-header">
+                            <h3 class="taskcat-header__title text-clip">Категория задач окок</h3>
+                            <div class="taskcat-header__controls">
+                                <button>Создать</button>
+                                <button>...</button>
+                            </div>
+                        </div>
+                        <div class="taskcat-content">
+
+                            <article class="task">
+                                <div class="task-header">
+                                    <input type="checkbox" class="task-header__check-done">
+                                    <h4 class="task-header__title text-clip">Моя реакция на эту информацию</h4>
+                                    <div class="task-header__controls">
+                                        <button>...</button>
+                                    </div>
+                                </div>
+                                <div class="task-content" onclick="openTaskmanView()">
+                                    <p class="task-content__text text-clip">
+                                        По мнению современных исследователей, у Томаса не было столь же интеллектуального подхода к войне, как у короля Генриха V, — он постоянно находился в тени своего старшего брата и был лишён возможности принимать самостоятельные решения. 
+                                    </p>
+                                </div>
+                                <div class="task-footer">
+                                    <span class="task-footer__meta text-clip">До: YY-MM-DD</span>
+                                    <span class="task-footer__meta text-clip">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                                </div>
+                            </article>
+                            <article class="task">
+                                <div class="task-header">
+                                    <input type="checkbox" class="task-header__check-done">
+                                    <h4 class="task-header__title text-clip">Моя реакция на эту информацию</h4>
+                                    <div class="task-header__controls">
+                                        <button>...</button>
+                                    </div>
+                                </div>
+                                <div class="task-content" onclick="openTaskmanView()">
+                                    <p class="task-content__text text-clip">
+                                        По мнению современных исследователей, у Томаса не было столь же интеллектуального подхода к войне, как у короля Генриха V, — он постоянно находился в тени своего старшего брата и был лишён возможности принимать самостоятельные решения. 
+                                    </p>
+                                </div>
+                                <div class="task-footer">
+                                    <span class="task-footer__meta text-clip">До: YY-MM-DD</span>
+                                    <span class="task-footer__meta text-clip">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                                </div>
+                            </article>
+                            <article class="task">
+                                <div class="task-header">
+                                    <input type="checkbox" class="task-header__check-done">
+                                    <h4 class="task-header__title text-clip">Моя реакция на эту информацию</h4>
+                                    <div class="task-header__controls">
+                                        <button>...</button>
+                                    </div>
+                                </div>
+                                <div class="task-content" onclick="openTaskmanView()">
+                                    <p class="task-content__text text-clip">
+                                        По мнению современных исследователей, у Томаса не было столь же интеллектуального подхода к войне, как у короля Генриха V, — он постоянно находился в тени своего старшего брата и был лишён возможности принимать самостоятельные решения. 
+                                    </p>
+                                </div>
+                                <div class="task-footer">
+                                    <span class="task-footer__meta text-clip">До: YY-MM-DD</span>
+                                    <span class="task-footer__meta text-clip">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                                </div>
+                            </article>
+                            <article class="task">
+                                <div class="task-header">
+                                    <input type="checkbox" class="task-header__check-done">
+                                    <h4 class="task-header__title text-clip">Моя реакция на эту информацию</h4>
+                                    <div class="task-header__controls">
+                                        <button>...</button>
+                                    </div>
+                                </div>
+                                <div class="task-content" onclick="openTaskmanView()">
+                                    <p class="task-content__text text-clip">
+                                        По мнению современных исследователей, у Томаса не было столь же интеллектуального подхода к войне, как у короля Генриха V, — он постоянно находился в тени своего старшего брата и был лишён возможности принимать самостоятельные решения. 
+                                    </p>
+                                </div>
+                                <div class="task-footer">
+                                    <span class="task-footer__meta text-clip">До: YY-MM-DD</span>
+                                    <span class="task-footer__meta text-clip">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="taskcat">
+                    <div class="taskcat-wrapper">
+                        <div class="taskcat-header">
+                            <h3 class="taskcat-header__title text-clip">Категория задач окок</h3>
+                            <div class="taskcat-header__controls">
+                                <button>Создать</button>
+                                <button>...</button>
+                            </div>
+                        </div>
+                        <div class="taskcat-content">
+
+                            <article class="task">
+                                <div class="task-header">
+                                    <input type="checkbox" class="task-header__check-done">
+                                    <h4 class="task-header__title text-clip">Моя реакция на эту информацию</h4>
+                                    <div class="task-header__controls">
+                                        <button>...</button>
+                                    </div>
+                                </div>
+                                <div class="task-content" onclick="openTaskmanView()">
+                                    <p class="task-content__text text-clip">
+                                        По мнению современных исследователей, у Томаса не было столь же интеллектуального подхода к войне, как у короля Генриха V, — он постоянно находился в тени своего старшего брата и был лишён возможности принимать самостоятельные решения. 
+                                    </p>
+                                </div>
+                                <div class="task-footer">
+                                    <span class="task-footer__meta text-clip">До: YY-MM-DD</span>
+                                    <span class="task-footer__meta text-clip">Назн.: ЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖЖ</span>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="taskcat">
+                    <div class="taskcat-wrapper">
+                        <div class="taskcat-header">
+                            <h3 class="taskcat-header__title text-clip">Категория задач окок</h3>
+                            <div class="taskcat-header__controls">
+                                <button>Создать</button>
+                                <button>...</button>
+                            </div>
+                        </div>
+                        <div class="taskcat-content">
+
+                            <div class="taskcat-content__placeholder">
+                                Задач нет
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <div class="taskman-spacer closed"></div>
+            </div>
+        </div>
+    </main>
+
+    <aside id="boardman">
+        BOARDMAN
+    </aside>
+
+    <aside id="taskman" class="closed">
+        <button onclick="closeTaskmanView()">X</button>
+        TASKMAN
+    </aside>
+
+    <footer id="debug" style="position: absolute; bottom: 0; max-height: 100vh; overflow: scroll; background-color: purple;">
+        <big><b>ОТЛАДЧИК ДЕМО-ВЕРСИИ</b></big>
+        <button onclick="toggleDebugView()">Закрыть</button>
+        
+
+        <details>
+            <summary>Заметки о логике проекта</summary>
+            <pre style="text-align: left;">
+                <hr>
+                <b>Обработка данных клиентом:</b>
+    
+                1. Получение UUID (например, из кук)
+                    - Если UUID нет, отправить на экран входа
+    
+                <b>Получение данных от сервера:</b>
+    
+                1. --> Текущая доска
+                2. <-- Если у пользователя есть права, данные:
+                    - (обработка ошибок, если UUID некорректный или группы не существует)
+                    - Информация о группе
+                    - Список участников группы с превилегиями
+                    - Список заметок (= заголовки заметок)
+    
+                <b>Обработка данных клиентом:</b>
+    
+                1. Парсинг и отображение информации о группе в интерфейсе
+                2. Заглушка ("Загрузка") в блоке заметок
+    
+                <b>Получение данных от сервера:</b>
+    
+                [АСИНХРОННО] ДЛЯ КАЖДОЙ ЗАМЕТКИ ИЗ СПИСКА:
+                1. --> Заметка
+                2. <-- Если у пользователя есть права, данные:
+                    <s>- Сокращённая заметка (напр, первые 80 символов без аттачей)</s>
+                    (мы будем получать полный текст заметки и аттачи только после нажатия)
+                    - Данные о заметке (заголовок, срок, метагруппа, редакторы + дата редактирования)
+                1. Получить данные способа сортировки (срок или метагруппы, если нет то срок)
+                2. Подготовить интерфейс к отображению нужных групп
+    
+                <b>Обработка данных клиентом:</b>
+                
+                [АСИНХРОННО] ПО ПОЛУЧЕНИИ ДАННЫХ О ЗАМЕТКЕ:
+                3. Новый блок с данными (сокращённая заметка + данные)
+                4. Распределение в нужную группу
+                <hr>
+                <b>Server Directory Structure:</b>
+
+                SERVER
+                |__ 🗄️ user_students
+                       |__ 🗂️ GROUP1
+                              |__ 📂 u0
+                                     |__ 🗒️ info.json
+                                     |__ 🗒️ member-of-boards.json
+                              |__ 📁 u1
+                              |__ 📁 …
+                |__ 🗄️ user_operators
+                       |__ 🗂️ GROUP1
+                              |__ 📂 o0
+                                     |__ 🗒️ info.json
+                                     |__ 🗒️ member-of-boards.json
+                              |__ 📁 o1
+                              |__ 📁 …
+                |__ 🗄️ boards
+                       |__ 🗂️ GROUP1
+                              |__ 📂 BOARD_NAME
+                                     |__ 🗒️ info.json
+                                     |__ 🗒️ memebers.json
+                                     |__ 🗒️ tasks.json
+                                     |__ 🗂️ tasks
+                                            |__ 📂 t0
+                                                   |__ 📕 body.md
+                                                   |__ 📕 body-short.md
+                                                   |__ 🗒️ info.json
+                                            |__ 📁 t1
+                                            |__ 📁 …
+                <hr>
+                <b>operator</b>
+                    - может создавать доски в любой группе
+                    - (postponed) получает личную доску
+                    - видит доски, в которых состоит или которые создал
+                    - может добавлять user и operator в доски, в которых состоит или которые создал
+                    - может создавать задачи в досках, в которых состоит или которые создал
+                    - (postponed) может создавать ЛИЧНЫЕ задачи (видны только ему) в досках, в которых состоит или которые создал 
+                
+                <b>user</b>
+                    - не может создавать доски
+                    - (postponed) получает личную доску
+                    - видит доски, в которых состоит
+                    - не может добавлять user или operator в доски
+                    - может создавать задачи в личной доске
+                    - (postponed) может создавать ЛИЧНЫЕ задачи (видны только ему) в досках, в которых состоит
+                <hr>
+            </pre>
+        </details>
+        <input type="text" id="demo-uuid" placeholder="id пользователя">
+        <input type="text" id="demo-bid" placeholder="id доски">
+        <button onclick="getDemoTaskData()">Получить вкусные данные</button>
+    </footer>
+</body>
+</html>
