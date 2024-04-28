@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Регистрация</title>
+
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="if-auth.css">
 </head>
 <body>
 
-<h1>Добро пожаловать!</h1>
-<form action="" method="post">
-    <label>
-        <input type="text" name="reg-code" placeholder="Регистраицонный код" />
-        <button>?</button>
-     </label>
-     <label>
-        <input type="text" name="reg-login" placeholder="Логин" />
-        <button>?</button>
-     </label>
-     <label>
-        <input type="text" name="reg-password" placeholder="Пароль" />
-        <button>?</button>
-     </label>
-    <input type="submit" value="Зарегистрироваться">
-    <a href="login.html">У меня уже есть учётная запись</a>
-</form>
+<main id="if-wrapper">
+   <section id="auth-register" class="flex-allcenter-row">
+      <h1>Добро пожаловать!</h1>
+      <form method="post" name="auth-register" class="flex-allcenter-row">
+         <label>
+            <input type="text" name="reg-code" placeholder="Регистраицонный код" /><button onclick="getHelp('reg-code')">?</button>
+         </label>
+         <label>
+            <input type="text" name="reg-login" placeholder="Логин" /><button onclick="getHelp('reg-login')">?</button>
+         </label>
+         <label>
+            <input type="text" name="reg-password" placeholder="Пароль" /><button onclick="getHelp('reg-password')">?</button>
+         </label>
+         <input type="submit" value="Зарегистрироваться">
+         <a href="login.html" onclick="toggleLoginRegisterForm()">У меня уже есть учётная запись</a>
+      </form>
+   </section>
+</main>
 
 </body>
 </html>
